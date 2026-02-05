@@ -6,23 +6,21 @@
     <title>Для моего Пуспика ❤️</title>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
-        /* Сброс стилей и база */
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            /* Нежный, спокойный градиент */
             background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
             height: 100vh;
-            height: -webkit-fill-available; /* Фикс для iOS Safari, чтобы на весь экран */
+            height: -webkit-fill-available;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            transition: background 0.8s ease; /* Плавная смена фона */
+            transition: background 0.8s ease;
         }
 
-        /* Плавающие сердечки на фоне (еле заметные) */
+        /* Сердечки на фоне */
         .hearts-bg {
             position: absolute;
             top: 0;
@@ -37,7 +35,7 @@
         .heart-bg {
             position: absolute;
             font-size: 20px;
-            color: rgba(255, 182, 193, 0.4); /* Очень бледные сердечки */
+            color: rgba(255, 182, 193, 0.4);
             animation: float 8s linear infinite;
             bottom: -10vh;
             opacity: 0;
@@ -49,14 +47,14 @@
             100% { transform: translateY(-110vh) scale(1.2) rotate(360deg); opacity: 0; }
         }
 
-        /* Основной контейнер карточки */
+        /* Карточка */
         .container {
             position: relative;
             z-index: 10;
-            background: rgba(255, 255, 255, 0.9); /* Почти непрозрачный белый */
+            background: rgba(255, 255, 255, 0.9);
             padding: 35px 25px;
             border-radius: 30px;
-            box-shadow: 0 15px 45px rgba(0,0,0,0.15); /* Мягкая тень */
+            box-shadow: 0 15px 45px rgba(0,0,0,0.15);
             max-width: 90%;
             width: 420px;
             text-align: center;
@@ -68,7 +66,7 @@
         }
 
         h1 {
-            color: #d81b60; /* Благородный розово-красный */
+            color: #d81b60;
             font-size: 1.7rem;
             margin: 25px 0 15px;
             line-height: 1.3;
@@ -82,10 +80,9 @@
             line-height: 1.5;
         }
 
-        /* Стили для контейнера гифок */
+        /* Гифки */
         .gif-container {
             width: 100%;
-            /* Немного увеличил высоту для бульдожек */
             height: 240px; 
             display: flex;
             justify-content: center;
@@ -93,17 +90,17 @@
             overflow: hidden;
             border-radius: 25px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            background-color: #fff; /* Белая подложка на всякий случай */
+            background-color: #fff;
         }
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Чтобы гифка заполняла контейнер красиво */
+            object-fit: cover;
             transition: transform 0.3s ease;
         }
 
-        /* Группа кнопок */
+        /* Кнопки */
         .btn-group {
             display: flex;
             justify-content: center;
@@ -119,7 +116,7 @@
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* Пружинистая анимация */
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
             font-weight: 700;
             -webkit-tap-highlight-color: transparent;
             outline: none;
@@ -131,7 +128,6 @@
             color: white;
             box-shadow: 0 6px 20px rgba(255, 64, 129, 0.4);
         }
-        /* Эффект нажатия */
         #yesBtn:active { transform: scale(0.96); box-shadow: 0 2px 10px rgba(255, 64, 129, 0.3); }
 
         #noBtn {
@@ -139,12 +135,10 @@
             color: #546e7a;
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
-         #noBtn:active { transform: scale(0.96); }
+        #noBtn:active { transform: scale(0.96); }
 
-        /* Класс для скрытия элементов */
         .hidden { display: none !important; }
 
-        /* Стили для текста про купон/сертификат */
         .coupon-text {
             color: #78909c;
             font-size: 0.95rem;
@@ -153,7 +147,6 @@
             padding-top: 20px;
             font-style: italic;
         }
-
     </style>
 </head>
 <body>
@@ -178,10 +171,11 @@
         <div class="gif-container">
             <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzJ6eW04Z3k5eW8wZXlhaGJ3eThweG00Z3F6aXZoMDRoODV5YmFpZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKoWXm3okO1kgHC/giphy.gif" alt="Happy Frenchie">
         </div>
-        <h1>Я счастлив! Спасибо, Пусп! ❤️</h1>
-        <p>Я обещаю быть внимательнее к тебе, слышать тебя и ценить наши моменты. Ты для меня всё!</p>
         
-        <p class="coupon-text">(Сделай скриншот! Это твой официальный сертификат на исполнение желания)</p>
+        <h1>Я счастлив! Спасибо, Пусп! ❤️</h1>
+        <p>Я обещаю быть внимательнее к тебе, слышать тебя и продумывать чаще наперёд. Ты для меня всё!</p>
+        
+        <p class="coupon-text">(Сделай скриншот! Это твой официальный сертификат на исполнение одного заветного желания)</p>
     </div>
 
     <script>
@@ -194,16 +188,12 @@
         const successCard = document.getElementById('successCard');
         const heartsContainer = document.getElementById('heartsContainer');
 
-        // --- Анимация фона (генерация сердечек) ---
         function createHearts() {
-            // Увеличил количество сердечек для атмосферы
             for (let i = 0; i < 25; i++) {
                 const heart = document.createElement('div');
                 heart.classList.add('heart-bg');
-                // Используем разные эмодзи
                 heart.innerHTML = ['❤️', '💖', '🤍', '🌸'][Math.floor(Math.random() * 4)];
                 heart.style.left = Math.random() * 100 + '%';
-                // Случайная скорость и задержка для естественности
                 heart.style.animationDuration = Math.random() * 5 + 6 + 's';
                 heart.style.animationDelay = Math.random() * 5 + 's';
                 heart.style.fontSize = Math.random() * 25 + 10 + 'px';
@@ -212,9 +202,6 @@
         }
         createHearts();
 
-        // --- Логика кнопок ---
-
-        // Фразы, которые появляются на кнопке "Нет"
         const phrases = [
             "Пусп, ты уверена?",
             "Точно-точно?",
@@ -227,12 +214,11 @@
             "Шучу! Жми ДА, вариантов нет!"
         ];
 
-        // ГИФКИ ДЛЯ ГРУСТНЫХ БУЛЬДОГОВ (когда жмет Нет)
-        // Использую надежные ссылки GIPHY
+        // 3. НОВЫЕ ССЫЛКИ ДЛЯ ГРУСТНЫХ БУЛЬДОГОВ (Tenor работает надежнее)
         const sadImages = [
-            "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2F5aDZ3aDZ4YjR6OHI0ajR6eHI0eHI0eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BGqofDXuhFz9aog/giphy.gif", // Грустно лежит
-            "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWZ5aDZ3aDZ4YjR6OHI0ajR6eHI0eHI0eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0HlPoZ5t0d2g1J8A/giphy.gif", // Грустные глаза крупно
-            "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnB6eW04Z3k5eW8wZXlhaGJ3eThweG00Z3F6aXZoMDRoODV5YmFpZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2JhrTjZ7rY55gX0A/giphy.gif" // Ещё один грустный в костюмчике
+            "https://media.tenor.com/fK5dY5OouuAAAAAi/sad-french-bulldog.gif", // Грустный француз 1
+            "https://media.tenor.com/Qf_S-Xv0iQwAAAAi/frenchie-sad.gif",      // Грустный француз 2
+            "https://media.tenor.com/Fw8_yA-f9zAAAAAi/frenchie-puppy.gif"     // Грустный щенок
         ];
 
         let clickCount = 0;
@@ -240,67 +226,52 @@
         noBtn.addEventListener('click', () => {
             clickCount++;
             
-            // Увеличиваем кнопку ДА (делаем её более "пружинистой")
             const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
             const currentPaddingX = parseFloat(window.getComputedStyle(yesBtn).paddingRight);
             const currentPaddingY = parseFloat(window.getComputedStyle(yesBtn).paddingTop);
             
-            // Ограничитель, чтобы кнопка не стала больше экрана
             if (currentSize < 70) { 
                 yesBtn.style.fontSize = `${currentSize * 1.15}px`;
                 yesBtn.style.padding = `${currentPaddingY * 1.1}px ${currentPaddingX * 1.12}px`;
             }
 
-            // Меняем текст кнопки НЕТ
             if (clickCount < phrases.length) {
                 noBtn.innerText = phrases[clickCount];
-                // С каждым кликом кнопка НЕТ становится чуть прозрачнее и меньше
                 noBtn.style.opacity = `${1 - clickCount * 0.1}`;
                 noBtn.style.transform = `scale(${1 - clickCount * 0.03})`;
             } else {
-                // В конце концов она исчезает
                 noBtn.style.display = 'none';
             }
 
-            // Меняем картинку на грустного бульдога (по кругу)
             const sadIndex = clickCount % sadImages.length;
             mainImage.src = sadImages[sadIndex];
             
-            // Меняем тексты заголовков, чтобы давить на жалость
             mainTitle.innerText = "Ну Пусп, пожалуйста... 🥺";
             subTitle.innerText = "Смотри, как я расстроился! Нажми уже правильную кнопку.";
             
-            // Небольшая вибрация карточки для драматизма
             card.style.transform = "translateX(5px)";
             setTimeout(() => { card.style.transform = "translateX(0)"; }, 100);
         });
 
         yesBtn.addEventListener('click', () => {
-            // Скрываем вопрос, показываем успех
             card.classList.add('hidden');
             successCard.classList.remove('hidden');
-
-            // Меняем фон на более праздничный, розовый
             document.body.style.background = "linear-gradient(135deg, #ffc3a0 0%, #ffafbd 100%)";
-
-            // ЗАПУСК САЛЮТА (КОНФЕТТИ)
             launchConfetti();
         });
 
-        // Функция для запуска красивого салюта
         function launchConfetti() {
             var duration = 3.5 * 1000;
             var end = Date.now() + duration;
 
             (function frame() {
-                // Запуск конфетти с двух нижних углов экрана
                 confetti({
                     particleCount: 10,
                     angle: 60,
                     spread: 65,
                     origin: { x: 0.1, y: 0.8 },
                     colors: ['#ff4081', '#ffc1e3', '#ffffff', '#ffd700'],
-                    shapes: ['circle', 'heart'] // Добавил сердечки в салют
+                    shapes: ['circle', 'heart']
                 });
                 confetti({
                     particleCount: 10,
